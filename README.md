@@ -8,10 +8,6 @@ This is a simple meth farm and selling script with Discord logging.
 - HW Development | HenkW
 
 **Changelog:**
-- Fully rewritten all the codes
-- Added discord logging for "almost" all the action made by player
-- Changed and improved events / handlers
-- Removed a lot of locales
 - Improved start/stop functions
 
 🛠 **Requirements**
