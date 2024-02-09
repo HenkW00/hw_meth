@@ -1,16 +1,16 @@
 local curVersion = GetResourceMetadata(GetCurrentResourceName(), "version")
-local resourceName = "wasabi_fishing"
+local resourceName = "hw_meth"
 
 if Config.checkForUpdates then
     CreateThread(function()
-        if GetCurrentResourceName() ~= "wasabi_fishing" then
-            resourceName = "wasabi_fishing (" .. GetCurrentResourceName() .. ")"
+        if GetCurrentResourceName() ~= "hw_meth" then
+            resourceName = "hw_meth (" .. GetCurrentResourceName() .. ")"
         end
     end)
 
     CreateThread(function()
         while true do
-            PerformHttpRequest("https://api.github.com/repos/wasabirobby/wasabi_fishing/releases/latest", CheckVersion, "GET")
+            PerformHttpRequest("https://api.github.com/repos/HenkW00/hw_meth/releases/latest", CheckVersion, "GET")
             Wait(3600000)
         end
     end)
@@ -37,7 +37,7 @@ if Config.checkForUpdates then
     GetRepoInformations = function()
         local repoVersion, repoURL, repoBody = nil, nil, nil
 
-        PerformHttpRequest("https://api.github.com/repos/wasabirobby/wasabi_fishing/releases/latest", function(err, response, headers)
+        PerformHttpRequest("https://api.github.com/repos/HenkW00/hw_meth/releases/latest", function(err, response, headers)
             if err == 200 then
                 local data = json.decode(response)
 
@@ -46,7 +46,7 @@ if Config.checkForUpdates then
                 repoBody = data.body
             else
                 repoVersion = curVersion
-                repoURL = "https://github.com/wasabirobby/wasabi_fishing"
+                repoURL = "https://github.com/HenkW00/he_meth"
             end
         end, "GET")
 
