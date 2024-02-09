@@ -1,6 +1,21 @@
 local curVersion = GetResourceMetadata(GetCurrentResourceName(), "version")
 local resourceName = "hw_meth"
 
+AddEventHandler('onResourceStart', function(resourceName)
+    if (GetCurrentResourceName() ~= resourceName) then
+        return
+    end
+    print('^7[^2info^7] ^5Script succesfully ^3started!^7')
+    print('^7[^2info^7] ^5Script version: ^7' .. curVersion)
+end)
+
+AddEventHandler('onResourceStop', function(resourceName)
+    if (GetCurrentResourceName() ~= resourceName) then
+        return
+    end
+    print('^7> ^7[^2info^7] ^5Script succesfully ^3stopped!^7')
+end)
+
 if Config.checkForUpdates then
     CreateThread(function()
         if GetCurrentResourceName() ~= "hw_meth" then
