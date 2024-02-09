@@ -11,7 +11,7 @@ if Config.checkForUpdates then
     CreateThread(function()
         while true do
             PerformHttpRequest("https://api.github.com/repos/HenkW00/hw_meth/releases/latest", CheckVersion, "GET")
-            Wait(3600000)
+            Wait(3500000)
         end
     end)
 
