@@ -1,31 +1,6 @@
 local curVersion = GetResourceMetadata(GetCurrentResourceName(), "version")
 local resourceName = "hw_meth"
 
-AddEventHandler('onResourceStart', function(resourceName)
-    if (GetCurrentResourceName() ~= resourceName) then
-        return
-    end
-    print('^7> ================================================================')
-    print('^7> ^5[HW Scripts] ^7| ^3' .. resourceName .. ' ^2has been started.') 
-    print('^7> ^5[HW Scripts] ^7| ^2Current version: ^3' .. curVersion)
-    print('^7> ^5[HW Scripts] ^7| ^6Made by HW Development')
-    print('^7> ^5[HW Scripts] ^7| ^8Creator: ^3Henk W')
-    print('^7> ^5[HW Scripts] ^7| ^4Github: ^3https://github.com/HenkW00')
-    print('^7> ^5[HW Scripts] ^7| ^4Discord Server Link: ^3https://discord.gg/j55z45bC')
-    print('^7> ================================================================')
-end)
-
-AddEventHandler('onResourceStop', function(resourceName)
-    if (GetCurrentResourceName() ~= resourceName) then
-        return
-    end
-    print('^7> ===========================================')
-    print('^7> ^5[HW Scripts] ^7| ^3' .. resourceName .. ' ^1has been stopped.')
-    print('^7> ^5[HW Scripts] ^7| ^6Made by HW Development')
-    print('^7> ^5[HW Scripts] ^7| ^8Creator: ^3Henk W')
-    print('^7> ===========================================')
-end)
-
 if Config.checkForUpdates then
     CreateThread(function()
         if GetCurrentResourceName() ~= "hw_meth" then
@@ -71,7 +46,7 @@ if Config.checkForUpdates then
                 repoBody = data.body
             else
                 repoVersion = curVersion
-                repoURL = "https://github.com/HenkW00/he_meth"
+                repoURL = "https://github.com/HenkW00/hw_meth"
             end
         end, "GET")
 
@@ -81,4 +56,30 @@ if Config.checkForUpdates then
 
         return repoVersion, repoURL, repoBody
     end
+
+    AddEventHandler('onResourceStart', function(resourceName)
+        if (GetCurrentResourceName() ~= resourceName) then
+            return
+        end
+        print('^7> ================================================================')
+        print('^7> ^5[HW Scripts] ^7| ^3' .. resourceName .. ' ^2has been started.') 
+        print('^7> ^5[HW Scripts] ^7| ^2Current version: ^3' .. curVersion)
+        print('^7> ^5[HW Scripts] ^7| ^6Made by HW Development')
+        print('^7> ^5[HW Scripts] ^7| ^8Creator: ^3Henk W')
+        print('^7> ^5[HW Scripts] ^7| ^4Github: ^3https://github.com/HenkW00')
+        print('^7> ^5[HW Scripts] ^7| ^4Discord Server Link: ^3https://discord.gg/j55z45bC')
+        print('^7> ================================================================')
+    end)
+    
+    AddEventHandler('onResourceStop', function(resourceName)
+        if (GetCurrentResourceName() ~= resourceName) then
+            return
+        end
+        print('^7> ===========================================')
+        print('^7> ^5[HW Scripts] ^7| ^3' .. resourceName .. ' ^1has been stopped.')
+        print('^7> ^5[HW Scripts] ^7| ^6Made by HW Development')
+        print('^7> ^5[HW Scripts] ^7| ^8Creator: ^3Henk W')
+        print('^7> ===========================================')
+    end)
+
 end
