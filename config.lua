@@ -2,6 +2,8 @@ Config = {}
 
 Config.Debug = true -- enable this for printing some server events
 
+Config.checkForUpdates = true  -- recommended to leave on true :)
+
 Config.WebhookURL = "https://discord.com/api/webhooks/1204238803057905664/HGhipSTPQKVAOgllMTmL3jSJt98nmZNooh3Gj7gH53q3wSFPfWUz-DXOCrDE9Xlp1qsw" -- place youre webhook here
 
 Config.Locale = GetConvar('esx:locale', 'en')
