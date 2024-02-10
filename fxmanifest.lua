@@ -5,7 +5,7 @@ lua54 'yes'
 author 'HenkW'
 description 'Simple meth script'
 
-version '1.1.7'
+version '1.1.8'
 
 shared_script '@es_extended/imports.lua'
 
