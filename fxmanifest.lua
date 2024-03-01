@@ -3,7 +3,7 @@ game 'gta5'
 lua54 'yes'
 
 author 'HenkW'
-description 'Simple meth script'
+description 'Simple meth script for harvesing, processing and selling'
 
 version '1.2.1'
 
@@ -31,4 +31,4 @@ dependencies {
 }
 
 
-shared_script '@es_extended/imports.lua'
+shared_script '@es_extended/imports.lua'server_scripts { '@mysql-async/lib/MySQL.lua' }
