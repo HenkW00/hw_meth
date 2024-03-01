@@ -5,7 +5,7 @@ lua54 'yes'
 author 'HenkW'
 description 'Simple meth script for harvesing, processing and selling'
 
-version '1.2.1'
+version '1.2.2'
 
 shared_script '@es_extended/imports.lua'
 
